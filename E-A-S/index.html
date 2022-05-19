@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <header>
+        <h1>Etch-A-Sketch</h1>
+        <ul class="img__container">
+            <li><button class="img__btn" id="img__btn--fall">🍁</button></li>
+            <li><button class="img__btn" id="img__btn--winter">❄️</button></li>
+            <li><button class="img__btn" id="img__btn--spring">🌱</button></li>
+            <li><button class="img__btn" id="img__btn--summer">🌻</button></li>
+        </ul>
+    </header>
+    <div class="container">
+        <section class="board"></section>
+        <section class="buttons">
+            <button class="buttons__btn buttons__btn--black" onclick="changeColor('black')">Black</button>
+            <button class="buttons__btn buttons__btn--white" onclick="changeColor('white')">Erase</button>
+            <button class="buttons__btn buttons__btn--random" onclick="changeColor('random')">Random</button>
+            <button class="buttons__btn buttons__btn--reset" onclick="resetBoard()">Reset</button>
+        </section>
+        
+    </div>
+    <div class="input">
+        <input class="inpt__size" type="text" placeholder="Size of Board"  onchange="changeSize(this.value)" />
+        <button class="input__btn">Set Size</button>
+    </div>
+</body>
+</html>

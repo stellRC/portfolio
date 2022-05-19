@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section class="container__pokidex" id="pokidex">
+        <div class="header--text">
+            <span class="header--logo">Pokémon</span><h1>Tic-Tac-Toe</h1>
+            <span>Choose your Pokémon to battle Team Rocket!</span>
+        </div>
+        <form class="search-form">
+            <div class="search--pokidex">
+                <label for="search">Pokédex </label>
+                <input type="text" class="search" placeholder="Pokemon Name">
+            </div>
+          <ul class="suggestions">
+            <li>Filter for a Pokémon</li>
+            <li>Gotta Catch 'Em All!</li>
+          </ul>
+        </form>
+    </section>
+    <section class="game--header">
+        <h1>Pokémon Tic-Tac-Toe</h1>
+        <div class="player--images">
+            <div class="player-one--image"></div>
+            <span>Vs.</span>
+            <div class="player-two--image"></div>
+        </div>
+    </section>
+    <section class="container" id="container">
+    </section>
+    <section class="winning-message" id="winning--message">
+        <div data-winning-message-text></div>
+        <button id="restart--button">Rematch?</button>
+    </section>
+</body>
+</html>

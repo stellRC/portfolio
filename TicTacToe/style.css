@@ -1,0 +1,401 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    font-family: 'Grape Nuts', cursive;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: var(--p-size);
+    background-color: black;
+    color: antiquewhite;
+    height: 100vh;
+   
+}
+
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    --h1-size: 64px;
+    --h1-sm-size: 30px;
+    --h2-size: 40px;
+    --h2-sm-size: 20px;
+    --p-size: 20px;
+
+    --height-h: 1.1;
+    --height-p: 1.5;
+
+    --space: 0.4em;
+
+    --border: 25px solid rgb(59, 45, 45, .5);
+
+    --box-shadow-neg: -4px -4px 8px rgba(0,0,0,.4);
+    --box-shadow-pos: 4px -4px 8px rgba(0,0,0,.4);
+
+
+    --unit-size: 50%;
+    --mark-size: calc(var(--unit-size) * .9)
+
+}
+
+h1 {
+    font-size: var(--h1-sm-size);
+    line-height: var(--height-h);
+}
+
+h2 {
+    font-size: var(--h2-sm-size);
+    line-height: var(--height-h);
+}
+
+p {
+    font-size: var(--p-size);
+    line-height: var(--height-p);
+}
+
+span {
+    font-size: var(--h2-sm-size);
+}
+
+h1,
+h2,
+p {
+    letter-spacing: var(--space);
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+button,
+a {
+    font-size: var(--h2-sm-size);
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+.container__pokidex {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   z-index: 10;
+   padding: 0 5vh 5vh 5vh;
+   background-color: black;
+
+}
+
+.header--text {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 5vh;
+
+}
+
+.game--header {
+    padding: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    font-size: 60px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-around;
+   align-items: flex-start;
+ 
+    background-color: red;
+    padding: 10vh 0;
+    margin-top: 30vh;
+    border-radius: 25px;
+    border:antiquewhite 10px solid;
+    box-shadow: var(--box-shadow-neg);
+    height: 50vh;
+
+    overflow-y: scroll;
+
+}
+
+.search-form::-webkit-scrollbar {
+    background-color: green;
+    border-radius: 25px;
+    
+}
+
+.search-form::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 25px;
+    
+    
+}
+
+.search--pokidex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: sticky;
+    top: 1vh;
+}
+
+
+.search {
+    background-color: black;
+    color: antiquewhite;
+    width: 25vw;
+    height: 8vh;
+    padding: 1vh;
+    font-size: 20px;
+    margin-bottom: 5vh;
+}
+
+.suggestions li {
+    box-shadow: var(--box-shadow-pos);
+    padding: 1vw;
+    background-color: green;
+    transform: scale(.8);
+}
+
+.suggestions li:hover {
+    transform: scale(1);
+}
+
+.btn {
+    padding: 1rem;
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 100%;
+    cursor: grab;
+    box-shadow: var(--box-shadow-pos);
+}
+
+.btn:hover {
+    background-color: antiquewhite;
+    color: black;
+    box-shadow: var(--box-shadow-neg);
+}
+
+.player--images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+
+.player-one--image {
+    width: 100px;
+    height: 100px;
+    padding-left: 50px;
+
+}
+
+.player-two--image {
+    width: 50px;
+    height: 50px;
+    background-image: url(img/teamRocket.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 50%;
+    width: 50%;
+    margin: 5vh auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    
+
+}
+
+.unit {
+    border: 5px solid green;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+   
+}
+
+.unit:nth-of-type(1) {
+    border-left: none;
+    border-top: none;
+}
+
+.unit:nth-of-type(2) {
+    border-top: none;
+}
+
+.unit:nth-of-type(3) {
+    border-top: none;
+    border-right: none;
+}
+.unit:nth-of-type(4) {
+    border-left: none;
+}
+.unit:nth-of-type(6) {
+    border-right: none;
+}
+.unit:nth-of-type(7) {
+    border-bottom: none;
+    border-left: none;
+}
+.unit:nth-of-type(8) {
+    border-bottom: none;
+}
+.unit:nth-of-type(9) {
+    border-bottom: none;
+    border-right: none;
+}
+
+
+.unit.x,
+.unit.circle {
+    cursor: not-allowed;
+}
+
+.unit.x::before,
+.unit.x::after,
+.unit.circle::before,
+.unit.circle::after {
+    background-color: black;
+}
+
+
+
+.unit.x::before,
+.unit.x::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.unit.x::before,
+.unit.x::after,
+.container.x .unit:not(.x):not(.circle):hover::before,
+.container.x .unit:not(.x):not(.circle):hover::after {
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  
+}
+
+
+.unit.circle::before,
+.unit.circle::after {
+    background-image: url(img/teamRocket.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.unit.circle::before,
+.unit.circle::after,
+.container.circle .unit:not(.x):not(.circle):hover::before,
+.container.circle .unit:not(.x):not(.circle):hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.unit.circle::before,
+.container.circle .unit:not(.x):not(.circle):hover::before{
+
+    width: 100%;
+    height: 100%;
+}
+.unit.circle::after,
+.container.circle .unit:not(.x):not(.circle):hover::after {
+
+   width: 100%;
+   height: 100%;
+}
+
+.winning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    background-color: rgba(0, 0, 0, .9);
+    font-size: var(--h1-size);
+    color: antiquewhite;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+#restart--button {
+    padding: 1rem 2rem;
+    font-size: var(--h1-sm-size);
+    border-radius: 100px;
+    cursor: pointer;
+    background-color: antiquewhite;
+    background-color: red;
+}
+
+#restart--button:hover {
+    background-color: rgb(17, 16, 16);
+    color: antiquewhite;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+@media (min-width: 600px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    span {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .search-form {
+        margin: 30vh;
+    }
+
+    .search {
+        width: 20vw;
+        height: 10vh;
+        padding: 5vh;
+        font-size: 40px;
+        margin-bottom: 5vh;
+    }
+}
