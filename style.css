@@ -343,7 +343,9 @@ body {
 
 /* #region Websites */
 
-
+.sites-list li {
+    margin-bottom: 5vh;
+}
 .sites-list p {
     overflow-wrap: break-word;
     padding-inline: 2em;
