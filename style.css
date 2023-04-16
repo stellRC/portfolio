@@ -1,8 +1,8 @@
 /* #region Font-FAce */
 
 @font-face {
-    font-family: 'Bebas Neue', cursive;
-    src: url("./assets/BebasNeue-Regular.ttf") format("ttf");
+    font-family: 'Dosis', sans-serif;
+    src: url("./assets/Dosis-Regular.ttf") format("ttf");
     font-weight: bold;
   }
 /* #endregion */
@@ -27,7 +27,7 @@ body,
 input,
 textarea {
     cursor: default;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Dosis', sans-serif;
 }
 
 img, 
@@ -67,8 +67,9 @@ picture {
     --h1--fontSize: 100px;
     --h2--fontSize: 45px;
     --h3--fontSize: 35px;
-    --p--fontSize: 20px;
-    --a--fontSize: 30px;
+    --p--fontSize: 18px;
+    --a--fontSize: 20px;
+    --p-Lg--fontSize: 20px;
 
     --p--weight: 200;
     --h1--weight: 800;
@@ -242,7 +243,7 @@ input,
 textarea {
     background-color: transparent;
     color: var(--white-dull);
-    /* border: 10px solid; */
+    border: 1px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg, rgba(88,197,164,1) 23%, rgba(212,212,212,1) 79%);
 }   
@@ -265,7 +266,7 @@ textarea {
 }
 
 .skills-container-item {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 /* #endregion */
@@ -282,9 +283,9 @@ body {
 
 .hero {
     justify-content: flex-end;
-    /* align-items: flex-; */
     gap: 5rem;
     min-height: 40vh;
+    margin-bottom: 10vh;
 }
 
 .hero-social {
@@ -298,7 +299,7 @@ body {
     height: 10vh;
     width: 10vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .hero-social {
@@ -307,7 +308,7 @@ body {
 }
 /* #endregion */
 
-/* #region section-main*/
+/* #region skills*/
 
 .section-main{
     width: 100%;
@@ -346,6 +347,7 @@ body {
 .sites-list li {
     margin-bottom: 5vh;
 }
+
 .sites-list p {
     overflow-wrap: break-word;
     padding-inline: 2em;
@@ -428,6 +430,7 @@ body {
     }
     .hero {
         min-height: 66vh;
+        margin-bottom: 0vh;
     }
 
     .section-main{
@@ -437,6 +440,7 @@ body {
 
     .sites-list p {
         max-width: 65ch;
+        font-size: var(--p-Lg--fontSize);
     }
 
     input,
@@ -445,6 +449,7 @@ body {
        width: 45vw;
        font-size: 20px;
     }
+
 
   
 
