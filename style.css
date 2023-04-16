@@ -314,7 +314,6 @@ body {
     width: 100%;
     gap: 1rem;
     padding-bottom: 2rem;
-    /* transform: translateY(-30vh); */
 }
 
 .skills-container {
@@ -323,14 +322,13 @@ body {
 
 .skills-container-list {
     gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.skill-container-top,
-.skill-container-bottom {
-    justify-content: space-evenly;
+
+.skills-container-item {
     color: var(--white-dull);
-    /* width: 100%; */
-    gap: 4rem;
 }
 
 .underline {
@@ -419,6 +417,12 @@ body {
     .flex-row-start {
         display: flex;
     }
+    .skills-container-list {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
 
 }
 
@@ -449,6 +453,13 @@ body {
        width: 45vw;
        font-size: 20px;
     }
+
+    .skills-container-list {
+        gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    
 
 
   
