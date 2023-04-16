@@ -467,7 +467,7 @@ body {
     }
 
     .skills-container .flex-column-start {
-        flex-direction: row;
+        /* flex-direction: row; */
     }
 
     
